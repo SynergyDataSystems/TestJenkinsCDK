@@ -1,9 +1,7 @@
 // def awsCredentials = [[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-personal']]
 
 pipeline {
-  agent {
-    any
-  }
+  agent any
 
   environment {
     HELLO_WORLD = "Hello world!"
