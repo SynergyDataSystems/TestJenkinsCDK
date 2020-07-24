@@ -1,8 +1,8 @@
-def awsCredentials = [[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-personal']]
+// def awsCredentials = [[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-personal']]
 
 pipeline {
   agent {
-    dockerfile true
+    any
   }
 
   environment {
@@ -13,7 +13,7 @@ pipeline {
     disableConcurrentBuilds()
     parallelsAlwaysFailFast()
     timestamps()
-    withCredentials(awsCredentials)
+    // withCredentials(awsCredentials)
   }
 
   stages {
