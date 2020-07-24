@@ -1,3 +1,4 @@
+// We have not added AWS credentials to Jenkins
 // def awsCredentials = [[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-personal']]
 
 pipeline {
@@ -10,7 +11,7 @@ pipeline {
   options {
     disableConcurrentBuilds()
     parallelsAlwaysFailFast()
-    timestamps()
+    // timestamps() // Apparently this is only available via a plugin: https://www.jenkins.io/doc/book/pipeline/syntax/#options
     // withCredentials(awsCredentials)
   }
 
