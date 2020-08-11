@@ -20,6 +20,7 @@ pipeline {
       parallel {
         stage('Build') {
           steps {
+            sh 'npm install typescript -g'
             sh 'npm run build'
           }
         }
